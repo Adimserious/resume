@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/*----------Headings*/
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;
+}
+
+/*----------Colors*/
+.bg-color-name-title {
+    background-color: aquamarine;
+
+}
+
+.bg-color-three-reasons {
+    background-color: aliceblue;
+}
+.ui-color-menu-home {
+    background-color: blueviolet;
+}
+.ui-color-menu-resume {
+    background-color: rgb(218, 190, 106);
+}
+.ui-color-menu-contact {
+    background-color: rgb(64, 43, 226);
+}
+.ui-color-menu-download {
+    background-color: rgb(56, 200, 142);
+}
+/*--Special padding/magins/text--*/
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: "Exo" sans-serif;
+    font-weight: 300;
+    color: rgb(15, 24, 32);
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.row-table {
+    display: table;
+}
+
+.section-column {
+    display: table-cell;
+    padding: 0 30px 30px;
+    float: none;
+}
+
+.section-heading {
+    font-family: "Exo" sans-serif;
+    font-weight: 300px;
+    margin-top: 25px;
+    margin-top: 40px;
+}
+
+/*--Profil image is 360px in height--*/
+.logo {
+    background: url("/assets/images/WhatsApp\ Image\ 2024-04-24\ at\ 19.23.58_35a96886-min.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.name {
+    font-family: "Exo", sans-serif;
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 40px;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+/*--Close up gaps between menu items--*/
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+/*--Close up gaps between items--*/
+.menucontainer {
+    font-size: 0;
+}
+#nav {
+    margin: 0;
+}
+/*--override font size of zero for menu items--*/
+#nav li {
+    font-size: 14px;
+    padding: 0;
+}
+
+.menuitem {
+    height: 200px;
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    height: 120px;
+}
+
+.menuitem a i {
+    margin-top: 22px;
+    display: block;
+    font-size: 26px;
+}
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+/*--Hover.css note: backgroung color not working yet--*/
+.hvr-sweep-to-bottom::before {
+    background-color: rgb(164, 173, 182); 
+    height: 120px;
+}
+/*--Footer--*/
+footer {
+    background-color: aquamarine;
+    min-height: 120px;
+    margin: 0;
+}
+.cv-pdf i {
+    font-size: 18px;
+    color:  rgb(15, 24, 32);
+    text-align: center;
+    padding-left: 5px;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {
+    color:  rgb(218, 190, 106);
+}
+
+.sociol-links {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.sociol-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: white;
+    background: rgb(15, 24, 32);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.sociol-links li a i:hover {
+    background-color: rgb(218, 190, 106);
+
+}
+
+#footer-down {
+    padding: 20px;
+}
