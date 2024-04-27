@@ -18,6 +18,7 @@ header {
 .bg-color-three-reasons {
     background-color: aliceblue;
 }
+
 .ui-color-menu-home {
     background-color: blueviolet;
 }
@@ -28,7 +29,7 @@ header {
     background-color: rgb(64, 43, 226);
 }
 .ui-color-menu-download {
-    background-color: rgb(56, 200, 142);
+    background-color: green;
 }
 /*--Special padding/magins/text--*/
 h1,
@@ -71,7 +72,7 @@ h4 {
 
 /*--Profil image is 360px in height--*/
 .logo {
-    background: url("/assets/images/WhatsApp\ Image\ 2024-04-24\ at\ 19.23.58_35a96886-min.jpg");
+    background: url("/assets/images/profile.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,6 +82,40 @@ h4 {
     -webkit-transition: all .5s ease-in-out;
 }
 
+/*--Portfolio section--*/
+
+.html-css {
+    background: url(/assets/images/biafra.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.JavaScript {
+    background: url(/assets/images/drivers.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.python {
+    background: url(/assets/images/python.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
 .name {
     font-family: "Exo", sans-serif;
     font-weight: 100;
@@ -196,4 +231,19 @@ footer {
 
 #footer-down {
     padding: 20px;
+}
+
+/*--Three reasons--*/
+.about-me-color {
+    color: blueviolet;
+}
+.three-reasons-icon {
+    font-size: 26px;
+    color: blueviolet;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.three-reasons-heading {
+    padding: 15px;
 }
