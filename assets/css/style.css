@@ -16,14 +16,23 @@ header {
 }
 
 .bg-color-three-reasons {
-    background-color: aliceblue;
+    background-color: rgb(206, 200, 200);
+    
+}
+
+.bg-color-portfolio {
+    background-color: rgb(206, 200, 200);
+}
+
+.bg-color-contact {
+    background-color: rgb(206, 200, 200);
 }
 
 .ui-color-menu-home {
     background-color: blueviolet;
 }
 .ui-color-menu-resume {
-    background-color: rgb(218, 190, 106);
+    background-color: rgb(243, 198, 63);
 }
 .ui-color-menu-contact {
     background-color: rgb(64, 43, 226);
@@ -244,6 +253,49 @@ footer {
     margin-left: 30px;
 }
 
-.three-reasons-heading {
-    padding: 15px;
+.portfolio-icon {
+    color: black;
+    padding: 30px;
 }
+
+.three-reasons-heading {
+    padding: 25px;
+}
+
+.portfolio-heading {
+    color: black;
+}
+
+.bg-color {
+    color: rgb(218, 190, 106)
+}
+
+/*--Contact form--*/
+.contact-heading {
+    font-family:"Exo" sans-serif;
+    
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.center-form {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+button{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/*--Contact form media query--*/
+@media(min-width: 992px) {
+    .center-form {
+        padding: 30px;
+        min-height: 240px;
+        margin: 0 auto;
+        max-width: 50%;
+    }
+}
+    
