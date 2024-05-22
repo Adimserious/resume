@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <!--Hover effect link and version-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/script.js"></script>
     <title>My cv</title>
 </head>
 <body>
@@ -111,6 +114,12 @@
                             </div>                                
                         </div>
                     </div>
+                </div>
+                <h3>View my Github projects</h3>
+                <div class="search-field">
+                    <input type="text" id="gh-username" value="octocat" oninput="getGitHubRepo()">
+                    <div id="gh-user-data"></div>
+                    <div id="gh-repo-data"></div>
                 </div>
             </div>
         </div>
