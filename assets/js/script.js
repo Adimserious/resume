@@ -1,7 +1,7 @@
 function userInfoHtml(user) {
     return `
-    <h2>§{user.name}
-        <span class="small-name>
+    <h2>${user.name}
+        <span class="small-name">
         (@<a href="${user.html_url}" target="_blank">${user.login}</a>)
         </span>
     </h2>
@@ -26,11 +26,14 @@ function getGitHubRepo(event) {
     $("#gh-user-data").html(`<div id="loader"><img src="/assets/images/loader.gif" alt="loading..." /></div>`)
 
     $.when(
-        $.getJSON(`https://api.github.com/users${username}`)
+        $.getJSON(`https://api.github.com/users/${username}`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
-        function(response) {
-            let userData = response;
+        function(firstResponse, secondResponse) {
+            let userData = firstResponse[0];
+            let repoData = secondResponse[0];
             $("#gh-user-data").html(userInfoHtml(userData));
+            $("#gh-repo-data").html(repoInfoHtml(repoData));
         }, function(errorResponse) {
             if(errorResponse.status === 404) {
                 $("#gh-user-data").html(
