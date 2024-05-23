@@ -36,6 +36,10 @@ function repoInfoHtml(repos) {
 
 //This function is the oninput in portfolio.html file
 function getGitHubRepo(event) {
+    //This will empty the repos of user when the input field is cleared
+    $("#gh-user-data").html("");
+    $("#gh-repo-data").html("");
+
     let username = $("#gh-username").val();
     if (!username) {
         $("#gh-user-data").html(`<h2>please enter a GitHub username</h2>`);
@@ -66,3 +70,5 @@ function getGitHubRepo(event) {
 
 
 }
+// This will display the octocat profile when the page is loaded
+$(document).ready(getGitHubRepo);
