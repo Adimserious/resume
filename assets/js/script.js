@@ -15,6 +15,25 @@ function userInfoHtml(user) {
     </div>`;
 }
 
+function repoInfoHtml(repos) {
+    if (repos.length == 0) {
+        return `<div class="clearfif repo-list">No repos found!</div>`;
+    }
+    let listItemsHtml = repos.map(function (repo) {
+        return `<li>
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                </li>`;
+    });
+    return `<div class="clearfix repo-list">
+                <p>
+                   <strong>Repo List:</strong>
+                </p>
+                <ul>
+                    ${listItemsHtml.join("\n")}
+                </ul>
+            </div>`;
+}
+
 //This function is the oninput in portfolio.html file
 function getGitHubRepo(event) {
     let username = $("#gh-username").val();
@@ -29,21 +48,21 @@ function getGitHubRepo(event) {
         $.getJSON(`https://api.github.com/users/${username}`),
         $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
-        function(firstResponse, secondResponse) {
+        function (firstResponse, secondResponse) {
             let userData = firstResponse[0];
             let repoData = secondResponse[0];
             $("#gh-user-data").html(userInfoHtml(userData));
             $("#gh-repo-data").html(repoInfoHtml(repoData));
-        }, function(errorResponse) {
-            if(errorResponse.status === 404) {
+        }, function (errorResponse) {
+            if (errorResponse.status === 404) {
                 $("#gh-user-data").html(
                     `<h2>No user information found ${username}</h2>`);
-            }else {
+            } else {
                 console.log(errorResponse);
                 $("#gh-user-data").html(
                     `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
             }
         })
-        
-    
+
+
 }
