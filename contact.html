@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
     <!--Hover effect link and version-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css" />
     <title>My cv</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "sM5K7Ado7MTz7mJ6E",
+            });
+        })();
+    </script>
 </head>
+
 <body>
     <header>
         <div class="row no-gutters">
@@ -29,16 +44,20 @@
                     <div class="col">
                         <ul id="nav" class="list-inline menucontainer">
                             <li class="col-6 col-sm-3 ui-color-menu-home list-inline-item menuitem">
-                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-house" arial-hidden="true"></i><span>Home</span></a>
+                                <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-house"
+                                        arial-hidden="true"></i><span>Home</span></a>
                             </li>
                             <li class="col-6 col-sm-3 ui-color-menu-resume list-inline-item menuitem">
-                                <a href="portfolio.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-briefcase" arial-hidden="true"></i><span>Portfolio</span></a>
+                                <a href="portfolio.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-briefcase"
+                                        arial-hidden="true"></i><span>Portfolio</span></a>
                             </li>
                             <li class="col-6 col-sm-3 ui-color-menu-contact list-inline-item menuitem">
-                                <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-address-book" arial-hidden="true"></i><span>Contact</span></a>
+                                <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa-solid fa-address-book"
+                                        arial-hidden="true"></i><span>Contact</span></a>
                             </li>
                             <li class="col-6 col-sm-3 ui-color-menu-download list-inline-item menuitem">
-                                <a href="assets/cv/Lebenslauf-link.pdf" target="_blank" class="hvr-sweep-to-bottom"><i class="fa-solid fa-download" arial-hidden="true"></i><span>Download</span></a>
+                                <a href="assets/cv/Lebenslauf-link.pdf" target="_blank" class="hvr-sweep-to-bottom"><i
+                                        class="fa-solid fa-download" arial-hidden="true"></i><span>Download</span></a>
                             </li>
                         </ul>
                     </div>
@@ -56,10 +75,12 @@
                 <h5 class="contact-heading uppercase text-center">Lets do that together!</h5>
 
                 <div class="center-form">
-                    <form action="">
-                        <input type="text" name="" id="fullname" class="form-control" placeholder="Name" required />
-                        <input type="text" email="" id="emailaddress" class="form-control" placeholder="Email" required />
-                        <textarea name="project-summary" id="project-summary" rows="5" class="form-control" placeholder="Project-description" required></textarea>
+                    <form onsubmit="return sendMail(this);">
+                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
+                        <input type="text" name="email" id="emailaddress" class="form-control" placeholder="Email"
+                            required />
+                        <textarea name="project-summary" id="project-summary" rows="5" class="form-control"
+                            placeholder="Project-description" required></textarea>
                     </form>
                     <div class="form-row text-center">
                         <div class="col">
@@ -70,13 +91,14 @@
             </div>
         </div>
     </section>
-    
+
     <footer class="container-fluid">
         <!--This id of footer-down to push the content of footer a little down-->
         <div id="footer-down" class="row">
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">About</h5>
-                <p class="inline-block">Full stack web developer, skilled in Html, css, JavaScript, python and bootstrap framwork</p>
+                <p class="inline-block">Full stack web developer, skilled in Html, css, JavaScript, python and bootstrap
+                    framwork</p>
             </div>
             <div class="col-sm-4">
                 <h5 class="uppercase general-sub">Download</h5>
@@ -84,7 +106,7 @@
                     <a href="assets/cv/Lebenslauf-link.pdf" target="_blank" class="cv-pdf">
                         <i class="fa-solid fa-download" arial-hidden="true"></i>
                         <span class="sr-only">Download</span>
-                    </a>   
+                    </a>
                 </p>
             </div>
             <div class="col-sm-4">
@@ -95,31 +117,31 @@
                         <a href="#" target="_blank">
                             <i class="fa-brands fa-facebook" arial-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
-                        </a>  
+                        </a>
                     </li>
                     <li class="list-inline">
                         <a href="#" target="_blank">
                             <i class="fa-brands fa-linkedin" arial-hidden="true"></i>
                             <span class="sr-only">Linkedin</span>
-                        </a>  
+                        </a>
                     </li>
                     <li class="list-inline">
                         <a href="#" target="_blank">
                             <i class="fa-brands fa-x" arial-hidden="true"></i>
                             <span class="sr-only">X</span>
-                        </a>  
+                        </a>
                     </li>
                     <li class="list-inline">
                         <a href="#" target="_blank">
                             <i class="fa-brands fa-instagram" arial-hidden="true"></i>
                             <span class="sr-only">Instagram</span>
-                        </a>  
+                        </a>
                     </li>
                     <li class="list-inline">
                         <a href="#" target="_blank">
                             <i class="fa-brands fa-youtube" arial-hidden="true"></i>
                             <span class="sr-only">Youtube</span>
-                        </a>  
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -129,5 +151,7 @@
     </footer>
 
     <script src="https://kit.fontawesome.com/c2a5ce9714.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/send-email.js"></script>
 </body>
+
 </html>
