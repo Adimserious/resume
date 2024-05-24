@@ -1,8 +1,10 @@
+
 function sendMail(contactForm) {
-    emailjs.send("service_dxefuql","template_3zux9ig", {
-        "to_name": contactForm.name.value,
-         "from_email": contactForm.name.value,
-         "message": contactForm.name.value
+    console.log('sendMail invoked')
+    emailjs.send("service_dxefuql","template_3zux9ig",{
+        to_name: contactForm.name.value,
+        from_name: contactForm.emailaddress.value,
+        message: contactForm.projectsummary.value,
     })
     .then(
         function(response) {
@@ -15,3 +17,4 @@ function sendMail(contactForm) {
     return false;
     
 }
+
